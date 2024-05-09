@@ -1,62 +1,28 @@
 {
-  "name": "vite-react-chakra-starter",
-  "version": "0.1.0",
+  "name": "react-ts",
   "private": true,
-  "author": "sozonome",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix && pnpm format",
-    "type-check": "tsc",
-    "check:turbo": "pnpm dlx turbo@latest lint type-check",
-    "knip": "knip",
-    "format": "prettier --write src",
-    "up-interactive": "pnpm up -i",
-    "up-latest": "pnpm up-interactive -L",
-    "release": "standard-version",
-    "push-release": "git push --follow-tags origin main",
-    "prepare": "husky install"
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@fontsource/plus-jakarta-sans": "^5.0.19",
-    "framer-motion": "^11.0.27",
-    "million": "3.0.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^5.0.1",
-    "react-router-dom": "^6.22.3"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
-    "@types/node": "^20.12.7",
-    "@types/react": "18.2.75",
-    "@types/react-dom": "^18.2.24",
-    "@types/react-helmet": "^6.1.11",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.57.0",
-    "eslint-config-sznm": "^2.0.3",
-    "husky": "^9.0.11",
-    "knip": "^5.9.4",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "rollup-plugin-visualizer": "^5.12.0",
-    "standard-version": "^9.5.0",
-    "typescript": "5.4.5",
-    "vite": "^5.2.8",
-    "vite-plugin-checker": "^0.6.4",
-    "vite-plugin-pwa": "^0.19.8",
-    "vite-tsconfig-paths": "^4.3.2"
-  },
-  "engines": {
-    "node": ">=16.x.x",
-    "pnpm": ">=8"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
   }
 }

@@ -1,38 +1,30 @@
-<img src="https://og.sznm.dev/api/generate?heading=vite-react-chakra-starter&text=React+vite+template+with+Chakra-UI+and+TypeScript+setup.&template=color&center=true&height=330" />
+# React + TypeScript + Vite
 
-This is a project bootstrapped with [`@vitejs/app`](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) (`react-ts`), added with [Chakra UI](https://chakra-ui.com) and [TypeScript](https://www.typescriptlang.org) setup.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- ⚡ blazing fast dev server and build
-- 🔗 route management added (`react-router-dom` configured)
+Currently, two official plugins are available:
 
-[**Live Demo**](https://vite-react-chakra-starter.sznm.dev/)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/sozonome/vite-react-chakra-starter) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sozonome/vite-react-chakra-starter)
+## Expanding the ESLint configuration
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/sozonome/vite-react-chakra-starter)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Getting Started
+- Configure the top-level `parserOptions` property like this:
 
-You can either click [`Use this template`](https://github.com/sozonome/vite-react-chakra-starter/generate) button on this repository and clone the repo or use npx degit like so:
-
-```bash
-npx degit sozonome/vite-react-chakra-starter <app_name>
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
 ```
 
-Then, run the development server:
-
-```bash
-pnpm dev
-```
-
-## Deployment
-
-- build command: `pnpm build`
-- output directory: `dist`
-
-## References
-
-- [vite](https://vitejs.dev)
-  - [avoid manual import](https://vitejs.dev/guide/features.html#jsx)
-- [Chakra UI](https://chakra-ui.com/)
-- [TypeScript](https://www.typescriptlang.org)
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
