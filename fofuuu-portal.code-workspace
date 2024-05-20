@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "server"
+		},
+		{
+			"path": "webapp"
+		},
+		{
+			"path": "core"
+		}
+	],
+	"settings": {
+		"typescript.preferences.importModuleSpecifier": "non-relative",
+		"typescript.tsdk": "core\\node_modules\\typescript\\lib",
+		"typescript.suggest.autoImports": true,
+		"typescript.suggest.includeCompletionsForImportStatements": true
+	}
+}

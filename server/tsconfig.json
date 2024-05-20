@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "ESNext",
+    ],
+    "moduleResolution": "node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@core/*": [
+        "../core/src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "ts-plugin-sort-import-suggestions",
+        "moveUpPatterns": [
+          "@/",
+          "@core/",
+          "\\.{1,2}/"
+        ],
+        "moveDownPatterns": [
+          "dist"
+        ],
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "../core/src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "core",
+  "version": "0.0.1",
+  "keywords": [],
+  "author": "Bruno Tachinardi",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit false --outDir ./dist"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/uuid": "^9.0.8",
+    "ts-plugin-sort-import-suggestions": "^1.0.4",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "replicate": "^0.29.4",
+    "uuid": "^9.0.1"
+  },
+  "volta": {
+    "node": "22.1.0"
+  }
+}

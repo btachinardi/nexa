@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@core/*": [
+        "../core/src/*"
+      ],
+      "@styles/*": [
+        "./styled-system/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "ts-plugin-sort-import-suggestions",
+        "moveUpPatterns": [
+          "@/",
+          "@styles/",
+          "@core/",
+          "\\.{1,2}/"
+        ],
+        "moveDownPatterns": [
+          "dist"
+        ],
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "styled-system",
+    "../core/src",
+    "../core/src/ai/generation/text/providers/Replicate.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

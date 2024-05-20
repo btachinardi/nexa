@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "ESNext"
+    ],
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": false,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "paths": {
+      "@core/*": [
+        "./src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "ts-plugin-sort-import-suggestions",
+        "moveUpPatterns": [
+          "@core/",
+          "\\.{1,2}/"
+        ],
+        "moveDownPatterns": [
+          "dist"
+        ],
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "src/ai/generation/text/providers/Replicate.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
